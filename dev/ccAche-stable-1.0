@@ -1,0 +1,8 @@
+#!/bin/bash
+if ! [ $EUID -eq 0 ]; then
+	echo "ccAche must be run as root."
+	exit 1
+else
+	rm -rf ~/Library/Caches/*
+	rm -rf /Library/Caches/*
+fi
