@@ -15,4 +15,16 @@ sudo rm -f /bin/ccAche
 ```
 Then you can modify `dev/ccAche-stable-*` or `cp` a new test file.
 # Development versions
-If you want to help us develop, there is a periodically updated `dev/snapshots` folder, containing all the development versions. The latest can be found as `dev/snapshots/latest.snapshot`; any snapshot can be found at `dev/snapshots/v<version number>s<snapshot number>`. For example, snapshot 3 of version 1.5.1 would be found at `dev/snapshots/v1.5.1s3` (not that there is a v1.5.1s3). To run these, you can edit `setup` to direct to any snapshot file. We would love to recieve bug reports and pull requests to help complete the next major update!
+If you want to help us develop, there is a periodically updated `dev/snapshots` folder, containing all the development versions. The latest can be found as `dev/snapshots/latest.snapshot`; any snapshot can be found at `dev/snapshots/v<version number>s<snapshot number>`. For example, snapshot 3 of version 1.5.1 would be found at `dev/snapshots/v1.5.1s3` (not that there is a v1.5.1s3). To test these, first set it up normally:
+```
+. setup
+```
+Then delete the actual binary file:
+```
+sudo rm -f /bin/ccAche
+```
+Finally, run the DownLoad Snapshot (DLS) setup file:
+```
+. setup-dls
+```
+We would love to recieve bug reports and pull requests to help complete the next major update!
