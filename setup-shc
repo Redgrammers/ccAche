@@ -13,3 +13,4 @@ else
 	exit 1
 fi
 sudo -p "Please enter the administrator password to proceed: " mv ./shc /bin/shc
+./setup
