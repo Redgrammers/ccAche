@@ -8,8 +8,10 @@ echo "echo 'SHC compiler working.'; touch worked.txt" >> ../testfile.sh
 . ../testfile.sh
 if [ -e worked.txt ]; then
 	rm -f worked.txt
+	rm -f ../testfile.sh
 else
 	echo "Something went wrong. Please try again."
+	rm -f ../testfile.sh
 	exit 1
 fi
 sudo -p "Please enter the administrator password to proceed: " mv ./shc /bin/shc
