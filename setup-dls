@@ -1,0 +1,14 @@
+#!/bin/bash
+which -s shc
+if [ $? -eq 1 ]; then
+	./setup-shc
+	exit 1
+else
+	cp -a dev/snapshots/latest.snapshot ccAche
+	shc -T -f ccAche
+	rm -f ccAche
+	rm -f ccAche.x.c
+	sudo -p "Please enter the administrator password to proceed: " mv ccAche.x /bin/ccAche ||
+	echo "Sorry, the password was incorrect." && exit 1 ||
+	echo "ccAche has been successfully installed."
+fi
