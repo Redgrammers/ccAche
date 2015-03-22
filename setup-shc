@@ -1,0 +1,15 @@
+#!/bin/bash
+wget http://www.datsi.fi.upm.es/~frosal/sources/shc-3.8.9.tgz
+tar xvfz shc-3.8.7.tgz
+cd shc-3.8.7 || echo "Something went wrong. Please try again." && exit 1
+make
+echo "echo 'SHC compiler working.'; touch worked.txt" >> ../testfile.sh
+./shc -T -f ../testfile.sh
+. ../testfile.sh
+if [ -e worked.txt ]; then
+	rm -f worked.txt
+else
+	echo "Something went wrong. Please try again."
+	exit 1
+fi
+sudo -p "Please enter the administrator password to proceed: " mv ./shc /bin/shc
