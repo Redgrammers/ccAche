@@ -8,7 +8,5 @@ else
 	shc -T -f ccAche
 	rm -f ccAche
 	rm -f ccAche.x.c
-	sudo -p "Please enter the administrator password to proceed: " mv ccAche.x /bin/ccAche ||
-	echo "Sorry, the password was incorrect." && exit 1 ||
-	echo "ccAche has been successfully installed."
+	sudo -p "Please enter the administrator password to proceed: " mv ccAche.x /bin/ccAche
 fi
