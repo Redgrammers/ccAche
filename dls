@@ -1,0 +1,3 @@
+. setup
+sudo -p "Please enter the administrator password to continue: " rm -f /bin/ccAche
+. setup-dls
