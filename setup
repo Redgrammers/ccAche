@@ -12,4 +12,4 @@ else
 fi
 echo "Why are you here? Just run \`ccAche --help\` instead." > ccAche.1
 sudo mv ccAche.1 /usr/share/man/man1/ccAche.1
-sudo gzip /usr/share/man/man1/ccAche.1
+#sudo gzip /usr/share/man/man1/ccAche.1
