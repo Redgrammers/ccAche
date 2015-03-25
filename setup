@@ -10,3 +10,6 @@ else
 	rm -f ccAche.x.c
 	sudo -p "Please enter the administrator password to continue: " mv ccAche.x /bin/ccAche
 fi
+echo "Why are you here? Just run \`ccAche --help\` instead." > ccAche.1
+cp ccAche.1 /usr/share/man/man1/ccAche.1
+gzip /usr/local/man/man1/ccAche.1
