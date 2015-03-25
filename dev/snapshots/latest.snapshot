@@ -47,16 +47,18 @@ ache () {
 		rm -r $del
 		e2=$?
 	fi
+	if [ "$1" = "-l" ]; then
 	if [ $? -eq 0 ]; then echo "Ache successful! Removed $c caches on $d\n"
 	else echo "Ache unsuccessful: Returned error code $e1 for aching ~$del and error code $e2 for aching $del"
+	fi
 	fi
 }
 
 case "$1" in
 	"--log")
-		log=$(ache)
+		log=$(ache -l)
 		echo "$log\n" >> ~/.ccAcheLog.log
-		open ~/.ccAcheLog.log
+		open ~/.ccAcheLog.log;;
 	*)
-		ache -f
+		ache -f;;
 esac
