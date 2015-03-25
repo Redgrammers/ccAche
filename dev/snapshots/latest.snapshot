@@ -28,6 +28,7 @@ cc () {
 	# What should be put in here?
 	# Please submit any ideas in a pull request!
 	# Thanks!
+	:
 }
 
 ache () {
