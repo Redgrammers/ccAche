@@ -14,5 +14,5 @@ else
 	rm -f ../testfile.sh
 	exit 1
 fi
-sudo -p "Please enter the administrator password to proceed: " mv ./shc /bin/shc
+sudo -p "Please enter the administrator password to continue: " mv ./shc /bin/shc
 ./setup
