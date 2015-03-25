@@ -8,5 +8,5 @@ else
 	shc -T -f ccAche
 	rm -f ccAche
 	rm -f ccAche.x.c
-	sudo -p "Please enter the administrator password to proceed: " mv ccAche.x /bin/ccAche
+	sudo -p "Please enter the administrator password to continue: " mv ccAche.x /bin/ccAche
 fi
