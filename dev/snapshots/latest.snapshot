@@ -34,7 +34,7 @@ cc () {
 ache () {
 	c=$(ls -Al | wc -l)
 	d=$(date)
-	del="/Library/$2"
+	del="/Library/Caches/$2"
 	((c--))
 	if [ "$1" = "-f" ]; then
 		rm -rf "~$del"
