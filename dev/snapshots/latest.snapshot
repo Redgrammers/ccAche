@@ -19,7 +19,7 @@ if [ "$1" = "--help" ]; then
 	echo -n "	"
 	echo -e "\e[0;33mLog the results to ~/.ccAche.log\e[0m"
 	echo -e "\e[0;31m———————————————\e[0m"
-	return 0
+	exit 0
 fi
 checkroot
 
