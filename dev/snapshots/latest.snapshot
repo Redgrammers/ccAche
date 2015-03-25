@@ -57,7 +57,7 @@ ache () {
 case "$1" in
 	"--log")
 		log=$(ache -l)
-		echo "$log\n" >> ~/.ccAcheLog.log
+		echo "$log" >> ~/.ccAcheLog.log
 		open ~/.ccAcheLog.log;;
 	*)
 		ache -f;;
