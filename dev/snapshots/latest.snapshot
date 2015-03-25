@@ -8,7 +8,7 @@ checkroot () {
 }
 
 if [ "$1" = "--help" ]; then
-	alias checkroot=""
+	alias checkroot=:
 	echo -e "\e[0;31m———————————————\e[0m"
 	echo -e "\e[0;33m  ccAche help \e[0m"
 	echo -e "\e[0;31m———————————————\e[0m"
@@ -16,17 +16,38 @@ if [ "$1" = "--help" ]; then
 	echo -e "\e[1;33m--help\e[0m"
 	echo -n "	"
 	echo -e "\e[0;33mAccess this help page.\e[0m"
+	echo -e "\e[1;33m--log\e[0m"
+	echo -n "	"
+	echo -e "\e[0;33mLog the results to ~/.ccAche.log\e[0m"
 	echo -e "\e[0;31m———————————————\e[0m";;
 fi
 checkroot
 
+# cc + Ache = ccAche
+cc () {
+	# What should be put in here?
+	# Please submit any ideas in a pull request!
+	# Thanks!
+}
+
 ache () {
+	c=$(ls -Al | wc -l)
+	d=$(date)
+	del="/Library/$2"
+	((c--))
 	if [ "$1" = "-f" ]; then
-		rm -rf ~/Library/Caches/*
-		rm -rf /Library/Caches/*
+		rm -rf "~$del"
+		e1=$?
+		rm -rf $del
+		e2=$?
 	else
-		rm -r ~/Library/Caches/*
-		rm -r /Library/Caches/*
+		rm -r "~$del"
+		e1=$?
+		rm -r $del
+		e2=$?
+	fi
+	if [ $? -eq 0 ]; then echo "Ache successful! Removed $c caches on $d\n"
+	else echo "Ache unsuccessful: Returned error code $e1 for aching ~$del and error code $e2 for aching $del"
 	fi
 }
 
