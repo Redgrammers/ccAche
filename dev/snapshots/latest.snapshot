@@ -48,7 +48,7 @@ ache () {
 		e2=$?
 	fi
 	if [ "$1" = "-l" ]; then
-	if [ $? -eq 0 ]; then echo "Ache successful! Removed $c caches on $d\n"
+	if [ $? -eq 0 ]; then echo "Ache successful! Removed $c caches on $d"
 	else echo "Ache unsuccessful: Returned error code $e1 for aching ~$del and error code $e2 for aching $del"
 	fi
 	fi
