@@ -4,7 +4,8 @@ ccAche (pronounced SICK-ACHE) is a simple bash program (turned executable) that 
 To install ccAche, just clone the repository and run the setup script, like so:
 ```
 git clone https://github.com/Redgrammers/ccAche
-. ccAche/setup
+cd ccAche
+. setup
 ```
 # Usage
 Currently (as of v1.0) ccAche comes with 0 options whatsoever; `ccAche --help` and `man ccAche` are expected to appear in v1.1, and specification options are expected to arrive in v1.2.
